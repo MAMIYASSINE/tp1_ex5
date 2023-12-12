@@ -1,0 +1,7 @@
+<span>{{title}} add a note</span><br/>
+<button  (click)="addnote()">add note</button><br/>
+<input [(ngModel)]="note"/>
+
+<ul>
+  <li *ngFor="let n of notes;let i=index;">{{n}}<button (click)="deletenote(i)">X</button><button (click)="Ajouter_sousnote()">Ajouter_sousnote</button><ul><li *ngFor="let s of sousnotes;">{{s}}</li></ul></li>
+</ul>
